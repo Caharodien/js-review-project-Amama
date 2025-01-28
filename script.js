@@ -4,9 +4,9 @@ const todoForm = document.getElementById('todo-form');
 const todoInput = document.getElementById('todo-input');
 const todoList = document.getElementById('todo-list');
 
-function renderTodos(){
+function renderTodos() {
     todoList.innerHTML = '';
-    todos.forEach((todo,index) =>{
+    todos.forEach((todo,index) => {
         const li = document.createElement('li');
         li,className = 'todo-item';
         li.innerHTML = `
@@ -20,7 +20,7 @@ function renderTodos(){
 
 function addTodo(event){
     event.preventDefault();
-    const newTodo = todoInput.ariaValueMax.trim();
+    const newTodo = todoInput.value.trim();
     if (newTodo){
         todos.push(newTodo);
         todoInput.value = '';
